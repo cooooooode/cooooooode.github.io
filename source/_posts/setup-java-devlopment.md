@@ -34,3 +34,5 @@ export PATH=$PATH:$M2_HOME/bin
 
 ### 3. 下载编辑器IDEA
 
+去jetbrains官网[https://www.jetbrains.com/idea/download/#section=mac](https://www.jetbrains.com/idea/download/#section=mac) 下载M1版本
+
