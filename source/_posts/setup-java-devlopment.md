@@ -34,5 +34,8 @@ export PATH=$PATH:$M2_HOME/bin
 
 ### 3. 下载编辑器IDEA
 
-去jetbrains官网[https://www.jetbrains.com/idea/download/#section=mac](https://www.jetbrains.com/idea/download/#section=mac) 下载M1版本
+去jetbrains官网[https://www.jetbrains.com/idea/download/#section=mac](https://www.jetbrains.com/idea/download/#section=mac) 下载M1版本。
 
+完成后可以安装无限试用插件, 点Preferences->Plugins->Manage Plugin Repositories添加仓库地址 `https://plugins.zhile.io/`， 然后搜索`IDE Eval Reset`插件进行安装。
+
+针对IDEA不能运行单个文件的问题，选择File->Project Structure->Modules中把你代码所在文件夹选为Sources然后确定。
