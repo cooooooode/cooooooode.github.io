@@ -14,19 +14,19 @@ tags:
 
 如图所示
 
-![](/images/截屏2021-10-03 下午4.44.30.png)
+![](/images/2021-10-03-spring001.png)
 
 用IDEA打开解压缩后的文件，即可自动下载相关类库。
 
 可在application.properties文件中修改相关配置，如修改端口号
 
-![](/images/截屏2021-10-03 下午4.52.17.png)
+![](/images/2021-10-03-spring002.png)
 
 ### 通过IDEA来创建Spring Project
 
-![](/images/截屏2021-10-03 下午4.53.57.png)
+![](/images/2021-10-03-spring003.png)
 
-![](/images/截屏2021-10-03 下午4.54.06.png)
+![](/images/2021-10-03-spring004.png)
 
 选择Spring Web即可。
 
