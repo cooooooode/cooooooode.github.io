@@ -76,7 +76,7 @@
       
         <li class="list-item">
           
-            <a href="/" class="item-link active">Home</a>
+            <a href="/" class="item-link">Home</a>
           
         </li>
       
@@ -128,7 +128,7 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link mobile-active">Home</a>
+              <a href="/" class="menu-link">Home</a>
             
           </li>
         
@@ -191,83 +191,48 @@
   </div>
 </header>
 
-    <main class="app-body">
+    <div id="article-banner">
+  <h2>Archives</h2>
+  <p class="post-date">Archives</p>
+</div>
+<main class="app-body" id="archives">
   
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2021/10/03/first-spring-project/">Hello Spring</a>
-      </h2>
-      <p class="article-date">October 3, 2021</p>
-      
-        
-  <a href="/tags#Java" >
-    <span class="tag-code">Java</span>
-  </a>
-
-  <a href="/tags#Spring" >
-    <span class="tag-code">Spring</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          Spring网站下载压缩包进入https://start.spring.io/网站，选择相关的配置, 然后下载就可以直接使用了。注意如果需要web开发，需要选择web插件，否则不会包含相应类库。
-如图所示
-![](/images/截屏2021-10-03 下午4.44.30.png)
-用ID ...
-        
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2021
+  </h1>
+  <div class="section-list">
+    
+    
+      <div class="section-list-item">
+        <a href="/2021/10/03/first-spring-project/" class="archive-title">Hello Spring</a>
+        <p class="archive-date">10-03</p>
       </div>
-      <a class="more" href="/2021/10/03/first-spring-project/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2021/07/27/setup-java-devlopment/">搭建Java开发环境</a>
-      </h2>
-      <p class="article-date">July 27, 2021</p>
-      
-        
-  <a href="/tags#Java" >
-    <span class="tag-code">Java</span>
-  </a>
-
-  <a href="/tags#JDK" >
-    <span class="tag-code">JDK</span>
-  </a>
-
-  <a href="/tags#Maven" >
-    <span class="tag-code">Maven</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          1. 下载JDK并配置环境变量去oracle官网 https://www.oracle.com/cn/java/technologies/javase-downloads.html下载JDK， 选择 Java SE 16, 然后选择对应的平台来下载。
-这里以macOS二进制为例，安装jdk后 ...
-        
+    
+      <div class="section-list-item">
+        <a href="/2021/07/27/setup-java-devlopment/" class="archive-title">搭建Java开发环境</a>
+        <p class="archive-date">07-27</p>
       </div>
-      <a class="more" href="/2021/07/27/setup-java-devlopment/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2021/07/27/hello-world/">Hello World</a>
-      </h2>
-      <p class="article-date">July 27, 2021</p>
-      
-      <div class="article-summary">
-        
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
-        
+    
+      <div class="section-list-item">
+        <a href="/2021/07/27/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">07-27</p>
       </div>
-      <a class="more" href="/2021/07/27/hello-world/">Read more</a>
-    </article>
-  
-
+    
+  </div>
+</section>
   
 </main>
 
-
+<script>
+  (function () {
+    var url = 'http://example.com/archives/2021/10/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
