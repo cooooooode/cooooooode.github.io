@@ -10,7 +10,7 @@
   
   <title>
     
-      Java
+      git worktree 介绍 | Java
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -192,62 +192,172 @@
 </header>
 
     <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">Archives</p>
+  <h2>git worktree 介绍</h2>
+  <p class="post-date">2022-04-11</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
 </div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2022
-  </h1>
-  <div class="section-list">
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h3 id="git-worktree-使用场景"><a href="#git-worktree-使用场景" class="headerlink" title="git worktree 使用场景"></a>git worktree 使用场景</h3><p>如果我们正在feature开发一个新功能，这时候老板说线上有个bug，那么通俗的做法是用git stash保存当前代码，然后从mater拉出一个<br>hotfix分支，修改提交后再切换到feature分支，用git stash pop恢复之前的代码。</p>
+<p>大部分时候可以这么做，但如果遇到大型项目，那么编辑器就会在你切换分支的时候来重新构建索引和设置，将会非常耗时。</p>
+<p>还有就是如果我们正在跑测试用例，不想半途而废再重新开始，这时候git stash就不那么灵光了。</p>
+<p>git worktree可以在不中断我们任务和当前工程状态情况下帮助我们实现上述场景。</p>
+<h3 id="git-worktree操作"><a href="#git-worktree操作" class="headerlink" title="git worktree操作"></a>git worktree操作</h3><p><code>git worktree add -b hotfix ../temp master</code><br>上述命令就是从当前项目弄出来一个全新的temp目录，并从master分支checkout出一个新的分支hotfix。</p>
+<p>后面我们就可以切换到temp目录 <code>cd ../temp</code> 用 <code>git status</code>查看你会发现这个是干干净净的目录，原来的目录仍然保持当前状态。</p>
+<p>在temp文件夹下开发完提交后，就可以切换到我们一开始的目录了。使用<code>git worktree remove temp</code>来移除temp副本，至此完成。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/31935776/what-would-i-use-git-worktree-for/31951225#31951225">https://stackoverflow.com/questions/31935776/what-would-i-use-git-worktree-for/31951225#31951225</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.gitkraken.com/learn/git/git-worktree">https://www.gitkraken.com/learn/git/git-worktree</a></p>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-worktree">https://git-scm.com/docs/git-worktree</a></p>
+</section>
+    <!-- Tags START -->
     
-    
-      <div class="section-list-item">
-        <a href="/2022/04/11/git-worktree-introduce/" class="archive-title">git worktree 介绍</a>
-        <p class="archive-date">04-11</p>
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#git" >
+    <span class="tag-code">git</span>
+  </a>
+
       </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2021/10/03/first-spring-project/">
+        <span class="nav-arrow">← </span>
+        
+          Hello Spring
+        
+      </a>
+    
     
   </div>
-</section>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
   
-    <section class="time-section">
-  <h1 class="section-year">
-    2021
-  </h1>
-  <div class="section-list">
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
     
-    
-      <div class="section-list-item">
-        <a href="/2021/10/03/first-spring-project/" class="archive-title">Hello Spring</a>
-        <p class="archive-date">10-03</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2021/07/27/setup-java-devlopment/" class="archive-title">搭建Java开发环境</a>
-        <p class="archive-date">07-27</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2021/07/27/hello-world/" class="archive-title">Hello World</a>
-        <p class="archive-date">07-27</p>
-      </div>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-worktree-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-nav-text">git worktree 使用场景</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-worktree%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">git worktree操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83"><span class="toc-nav-text">参考</span></a></li></ol>
     
   </div>
-</section>
+</aside>
   
+  <!-- Catalog END -->
 </main>
 
 <script>
   (function () {
-    var url = 'http://example.com/tags/Java/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    var url = 'http://example.com/2022/04/11/git-worktree-introduce/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
   })();
 </script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
