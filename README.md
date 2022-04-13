@@ -11,3 +11,9 @@
 `hexo clean && hexo generate`
 
 `hexo deploy`
+
+
+
+### hexo页面配置相关
+
+[https://wizardforcel.gitbooks.io/markdown-simple-world/content/hexo-tutor-4.html](https://wizardforcel.gitbooks.io/markdown-simple-world/content/hexo-tutor-4.html)
