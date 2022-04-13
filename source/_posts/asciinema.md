@@ -24,7 +24,7 @@ brew install asciinema
 asciinema rec
 ```
 
-操作完毕后可以按提示<ctrl-d>或者`exit`退出录制。退出后根据提示按<enter>就可以上传到asciinema.org官网了，没有注册账户的话默认保存7天。
+操作完毕后可以按提示`<ctrl-d>`或者`exit`退出录制。退出后根据提示按`<enter>`就可以上传到asciinema.org官网了，没有注册账户的话默认保存7天。
 
 ![](/images/2022-04-13-asciinema.png)
 
