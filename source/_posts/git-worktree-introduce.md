@@ -35,5 +35,5 @@ git worktree可以在不中断我们任务和当前工程状态情况下帮助�
 
 [https://git-scm.com/docs/git-worktree](https://git-scm.com/docs/git-worktree)
 
-
+[https://dayarch.top/p/git-worktree-in-practice.html](https://dayarch.top/p/git-worktree-in-practice.html)
 

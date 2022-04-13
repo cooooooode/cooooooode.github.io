@@ -10,7 +10,7 @@
   
   <title>
     
-      Java
+      asciinema 终端录制 | Java
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -192,67 +192,180 @@
 </header>
 
     <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">Archives</p>
+  <h2>asciinema 终端录制</h2>
+  <p class="post-date">2022-04-13</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
 </div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2022
-  </h1>
-  <div class="section-list">
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h3 id="asciinema"><a href="#asciinema" class="headerlink" title="asciinema"></a>asciinema</h3><p>ascii是一个终端录制程序，可以将自己的终端操作录制后分享给他人。</p>
+<p>安装asciinema</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install asciinema</span><br></pre></td></tr></table></figure>
+
+<p>开始屏幕录制</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asciinema rec</span><br></pre></td></tr></table></figure>
+
+<p>操作完毕后可以按提示<ctrl-d>或者<code>exit</code>退出录制。退出后根据提示按<enter>就可以上传到asciinema.org官网了，没有注册账户的话默认保存7天。</p>
+<p><img src="/images/2022-04-13-asciinema.png"></p>
+<p>示例: <a target="_blank" rel="noopener" href="https://asciinema.org/a/486676">https://asciinema.org/a/486676</a></p>
+</section>
+    <!-- Tags START -->
     
-    
-      <div class="section-list-item">
-        <a href="/2022/04/13/asciinema/" class="archive-title">asciinema 终端录制</a>
-        <p class="archive-date">04-13</p>
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#ascii" >
+    <span class="tag-code">ascii</span>
+  </a>
+
+  <a href="/tags#terminal" >
+    <span class="tag-code">terminal</span>
+  </a>
+
+  <a href="/tags#shell" >
+    <span class="tag-code">shell</span>
+  </a>
+
       </div>
     
-      <div class="section-list-item">
-        <a href="/2022/04/11/git-worktree-introduce/" class="archive-title">git worktree 介绍</a>
-        <p class="archive-date">04-11</p>
-      </div>
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2022/04/11/git-worktree-introduce/">
+        <span class="nav-arrow">← </span>
+        
+          git worktree 介绍
+        
+      </a>
+    
     
   </div>
-</section>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
   
-    <section class="time-section">
-  <h1 class="section-year">
-    2021
-  </h1>
-  <div class="section-list">
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
     
-    
-      <div class="section-list-item">
-        <a href="/2021/10/03/first-spring-project/" class="archive-title">Hello Spring</a>
-        <p class="archive-date">10-03</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2021/07/27/setup-java-devlopment/" class="archive-title">搭建Java开发环境</a>
-        <p class="archive-date">07-27</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2021/07/27/hello-world/" class="archive-title">Hello World</a>
-        <p class="archive-date">07-27</p>
-      </div>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#asciinema"><span class="toc-nav-text">asciinema</span></a></li></ol>
     
   </div>
-</section>
+</aside>
   
+  <!-- Catalog END -->
 </main>
 
 <script>
   (function () {
-    var url = 'http://example.com/archives/2021/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
+    var url = 'http://example.com/2022/04/13/asciinema/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
   })();
 </script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
