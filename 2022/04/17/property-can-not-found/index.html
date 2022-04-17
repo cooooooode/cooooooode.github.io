@@ -10,7 +10,7 @@
   
   <title>
     
-      Hello Spring | Java
+      property-can-not-found错误 | Java
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -147,8 +147,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>Hello Spring</h2>
-  <p class="post-date">2021-10-03</p>
+  <h2>property-can-not-found错误</h2>
+  <p class="post-date">2022-04-17</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -156,17 +156,21 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h3 id="Spring网站下载压缩包"><a href="#Spring网站下载压缩包" class="headerlink" title="Spring网站下载压缩包"></a>Spring网站下载压缩包</h3><p>进入<a target="_blank" rel="noopener" href="https://start.spring.io/">https://start.spring.io/</a>网站，选择相关的配置, 然后下载就可以直接使用了。<br>注意如果需要web开发，需要选择web插件，否则不会包含相应类库。</p>
-<p>如图所示</p>
-<p><img src="/images/2021-10-03-spring001.png"></p>
-<p>用IDEA打开解压缩后的文件，即可自动下载相关类库。</p>
-<p>可在application.properties文件中修改相关配置，如修改端口号</p>
-<p><img src="/images/2021-10-03-spring002.png"></p>
-<h3 id="通过IDEA来创建Spring-Project"><a href="#通过IDEA来创建Spring-Project" class="headerlink" title="通过IDEA来创建Spring Project"></a>通过IDEA来创建Spring Project</h3><p><img src="/images/2021-10-03-spring003.png"></p>
-<p><img src="/images/2021-10-03-spring004.png"></p>
-<p>选择Spring Web即可。</p>
-<h3 id="实现第一个Restful-Hello-World"><a href="#实现第一个Restful-Hello-World" class="headerlink" title="实现第一个Restful Hello World"></a>实现第一个Restful Hello World</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.xuboso.demo3;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo3Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(Demo3Application.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/hello&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(<span class="meta">@RequestParam(value = &quot;name&quot;, defaultValue = &quot;kitty&quot;)</span> String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> String.format(<span class="string">&quot;Hello %s&quot;</span>, name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <section class="markdown-content"><h3 id="java-Properties-could-not-be-found错误"><a href="#java-Properties-could-not-be-found错误" class="headerlink" title="java Properties  could not be found错误"></a>java Properties  could not be found错误</h3><p>跟着spring tutorial学习的过程中，在学到上传文件 <code>https://spring.io/guides/gs/uploading-files/</code> 的时候按照原文代码编译报错了，错误如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Parameter 0 of constructor <span class="keyword">in</span> com.example.uploadingfiles.storage.FileSystemStorageService required a bean of <span class="built_in">type</span> <span class="string">&#x27;com.example.uploadingfiles.storage.StorageProperties&#x27;</span> that could not be found.</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/2020-04-17-property-problem.png"></p>
+<p>大意是说定义的property没有找到，但是在入口不是使用了@SpringApplication注解吗，怎么会扫描不到呢，后来Google一番，发现说是被覆盖掉了，经过一番折腾终于解决了。</p>
+<p>解决办法就是需要在你的property添加<code>@Component</code>注解，这样就能被发现了。</p>
+<p><img src="/images/2022-04-17-component.png"></p>
+<p>最开始的时候还遇到了这个报错 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@ConfigurationProperties Spring Boot Configuration Annotation Processor not found <span class="keyword">in</span> classpath</span><br><span class="line"></span><br><span class="line">@ConfigurationProperties Spring Boot Configuration Annotation Processor not configured</span><br></pre></td></tr></table></figure>
+
+<p>解决办法是安装依赖 <code>spring-boot-configuration-processor</code> 更新pom.xml</p>
+<p><img src="/images/2022-04-17-processor.png"></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42839126/configurationproperties-spring-boot-configuration-annotation-processor-not-foun">https://stackoverflow.com/questions/42839126/configurationproperties-spring-boot-configuration-annotation-processor-not-foun</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.roseindia.net/answers/viewqa/Spring/265507-consider-defining-a-bean-of-type-in-your-configuration-spring-boot.html">https://www.roseindia.net/answers/viewqa/Spring/265507-consider-defining-a-bean-of-type-in-your-configuration-spring-boot.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-boot/issues/19603">https://github.com/spring-projects/spring-boot/issues/19603</a></p>
 </section>
     <!-- Tags START -->
     
@@ -181,6 +185,10 @@
     <span class="tag-code">spring</span>
   </a>
 
+  <a href="/tags#problems" >
+    <span class="tag-code">problems</span>
+  </a>
+
       </div>
     
     <!-- Tags END -->
@@ -189,20 +197,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2021/07/27/setup-java-devlopment/">
+      <a class="nav-left" href="/2022/04/13/asciinema/">
         <span class="nav-arrow">← </span>
         
-          搭建Java开发环境
+          asciinema 终端录制
         
       </a>
     
-    
-      <a class="nav-right" href="/2022/04/11/git-worktree-introduce/">
-        
-          git worktree 介绍
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -237,7 +238,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Spring%E7%BD%91%E7%AB%99%E4%B8%8B%E8%BD%BD%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="toc-nav-text">Spring网站下载压缩包</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%9A%E8%BF%87IDEA%E6%9D%A5%E5%88%9B%E5%BB%BASpring-Project"><span class="toc-nav-text">通过IDEA来创建Spring Project</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E7%8E%B0%E7%AC%AC%E4%B8%80%E4%B8%AARestful-Hello-World"><span class="toc-nav-text">实现第一个Restful Hello World</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#java-Properties-could-not-be-found%E9%94%99%E8%AF%AF"><span class="toc-nav-text">java Properties  could not be found错误</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83"><span class="toc-nav-text">参考</span></a></li></ol>
     
   </div>
 </aside>
@@ -247,7 +248,7 @@
 
 <script>
   (function () {
-    var url = 'https://cooooooode.github.io/2021/10/03/first-spring-project/';
+    var url = 'https://cooooooode.github.io/2022/04/17/property-can-not-found/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
