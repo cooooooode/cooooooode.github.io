@@ -3,8 +3,8 @@ title: "Hello Spring"
 date: 2021-10-03 16:42
 banner:
 tags:
-  - Java
-  - Spring
+  - java
+  - spring
 ---
 
 ### Spring网站下载压缩包

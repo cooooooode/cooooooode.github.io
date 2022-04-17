@@ -3,9 +3,9 @@ title: "搭建Java开发环境"
 date: 2021-07-27 11:35
 banner:
 tags:
-  - Java
+  - java
   - JDK
-  - Maven
+  - maven
 ---
 
 ### 1. 下载JDK并配置环境变量
